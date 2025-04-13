@@ -52,7 +52,7 @@ public class TesteBiblioteca {
 					} catch (InputMismatchException e) {
 						System.out.println("\nEntrada do valor invalido.\nUtilize somente "
 								+ "números e virgula conforme exemplo: 0,00\n");
-						//sc.nextLine();// Limpar o buffer, evita loop infinito
+						sc.nextLine();// Limpar o buffer, evita loop infinito
 					}
 				}
 				break;
