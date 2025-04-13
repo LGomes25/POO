@@ -20,3 +20,42 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+
+# Compiled class files
+*.class
+
+# Ignorar a pasta .metadata
+.metadata/
+
+# Log files
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# Virtual machine crash logs
+hs_err_pid*
+
+# Ignorar configurações do VS Code
+.vscode/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+
+# Eclipse
+.project
+.classpath
+.settings/
+bin/
+tmp/
