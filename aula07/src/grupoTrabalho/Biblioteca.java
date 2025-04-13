@@ -14,36 +14,39 @@ public class Biblioteca {
 		this.listaLivros = new ArrayList<>(); // inicia a lista no construtor
 	}
 
-    //Metodos
+    //Metodos Adiciona o livro
     public void adicionar(Livro livro) {
-        listaLivros.add(livro); // Adiciona o livro à lista
+        listaLivros.add(livro); 
     }
     
+    //Metodos Apresenta todos os Livro
     public void listar() {
         System.out.println("\n----- Lista de Livros -----");
         for (Livro titulo : listaLivros) {
-            System.out.println(titulo); // Apresenta todos os Livro
+            System.out.println(titulo);
         }
     }
     
+    //Metodo Procura e Apresenta Livro em faixa
     public int pesquisarFaixaDePreco(double valorInicial, double valorFinal) {
         int qtd = 0;
 
         System.out.println("\n----- Livros na faixa de preço -----");
-        for (Livro titulo : listaLivros) {//procurar livro dentro da faixa
+        for (Livro titulo : listaLivros) {
             if (titulo.getPreco() >= valorInicial && titulo.getPreco() <= valorFinal) {
-                System.out.println(titulo); //Apresenta o nome do livro encontrado
+                System.out.println(titulo);
                 qtd++;
             }
         }
         return qtd; // Retorna a quantidade de livros encontrados
     }
     
+    //Metodo Soma total em dinheiro
     public double calcularTotalLivros() {
         double total = 0;
 
         for (Livro titulo : listaLivros) {
-            total += titulo.getPreco(); // Soma o preço de cada livro
+            total += titulo.getPreco();
         }
 
         return total;
