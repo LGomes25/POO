@@ -9,9 +9,10 @@ public class TesteSistemaVeiculos {
 	public static void main(String[] args) {
 
 		Scanner scanner = new Scanner(System.in);
-        Map<String, Veiculo> mapaVeiculos = new HashMap<>();
+        
+		Map<String, Veiculo> mapaVeiculos = new HashMap<>();
 
-        int opcao;
+        int op;
 
         do {
             System.out.println("\n===== MENU =====");
@@ -19,10 +20,10 @@ public class TesteSistemaVeiculos {
             System.out.println("2. Buscar Veículo pela Placa");
             System.out.println("3. Sair");
             System.out.print("Escolha uma opção: ");
-            opcao = scanner.nextInt();
+            op = scanner.nextInt();
             scanner.nextLine(); // Limpar o buffer
 
-            switch (opcao) {
+            switch (op) {
                 case 1: // Cadastrar veículo
                     System.out.println("\n=== Cadastro de Veículo ===");
                     System.out.print("Digite a placa: ");
@@ -50,8 +51,7 @@ public class TesteSistemaVeiculos {
                     System.out.print("Digite a placa: ");
                     String placaBusca = scanner.nextLine();
 
-                    // Verifica se a placa existe no mapa
-                    if (mapaVeiculos.containsKey(placaBusca)) {
+                    if (mapaVeiculos.containsKey(placaBusca)) {// Verifica se a placa existe no mapa
                         Veiculo veiculoEncontrado = mapaVeiculos.get(placaBusca);
                         System.out.println("Veículo encontrado: " + veiculoEncontrado);
                     } else {
@@ -66,7 +66,7 @@ public class TesteSistemaVeiculos {
                 default:
                     System.out.println("Opção inválida. Por favor, tente novamente.");
             }
-        } while (opcao != 3);
+        } while (op != 3);
 
         scanner.close();
 	}

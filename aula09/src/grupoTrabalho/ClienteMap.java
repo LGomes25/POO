@@ -28,8 +28,6 @@ public class ClienteMap {
             System.out.println("ID: " + entrada.getKey() + " -> " + entrada.getValue());
         }
 
-		
-		
 	}
 
 }
